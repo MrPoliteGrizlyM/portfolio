@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -10,7 +11,11 @@ const styles = theme => ({
     box: {
         backgroundColor: "white",
         marginBottom: "50px",
-        cursor: "pointer"
+        border: "1px solid #666A86"
+    },
+    link: {
+        textDecoration: "none",
+        color: "black"
     },
     boxImg: {
         textAlign: "center",
@@ -60,42 +65,46 @@ class BlogList extends Component {
         return (
             <Grid className={classes.background} justify={"center"} container>
                 <Grid className={classes.box} xs={10} item>
-                    <Grid container>
-                        <Grid className={classes.boxImg} xs={12} lg={4} item>
-                            <img src="/images/project-img.jpg" alt=""/>
+                    <Link className={classes.link} to={"/app/show"}>
+                        <Grid container>
+                            <Grid className={classes.boxImg} xs={12} lg={4} item>
+                                <img src="/images/project-img.jpg" alt=""/>
+                            </Grid>
+                            <Grid className={classes.boxText} xs={12} lg={6} item>
+                                <h1>IDENTITY APP</h1>
+                                <p>
+                                    Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+                                    By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside,
+                                    the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere,
+                                    whose upper half was strewn with silver. Looking down into the dark gulf below,
+                                    I could see a ruddy light streaming through a rift in the clouds.
+                                </p>
+                            </Grid>
+                            <Grid xs={2} item></Grid>
                         </Grid>
-                        <Grid className={classes.boxText} xs={12} lg={6} item>
-                            <h1>IDENTITY APP</h1>
-                            <p>
-                                Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-                                By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside,
-                                the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere,
-                                whose upper half was strewn with silver. Looking down into the dark gulf below,
-                                I could see a ruddy light streaming through a rift in the clouds.
-                            </p>
-                        </Grid>
-                        <Grid xs={2} item></Grid>
-                    </Grid>
+                    </Link>
                 </Grid>
 
                 {/*Test*/}
                 <Grid className={classes.box} xs={10} item>
-                    <Grid container>
-                        <Grid className={classes.boxImg} xs={12} lg={4} item>
-                            <img src="/images/project-img.jpg" alt=""/>
+                    <Link className={classes.link} to={"/app/show"}>
+                        <Grid container>
+                            <Grid className={classes.boxImg} xs={12} lg={4} item>
+                                <img src="/images/project-img.jpg" alt=""/>
+                            </Grid>
+                            <Grid className={classes.boxText} xs={12} lg={6} item>
+                                <h1>IDENTITY APP</h1>
+                                <p>
+                                    Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+                                    By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside,
+                                    the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere,
+                                    whose upper half was strewn with silver. Looking down into the dark gulf below,
+                                    I could see a ruddy light streaming through a rift in the clouds.
+                                </p>
+                            </Grid>
+                            <Grid xs={2} item></Grid>
                         </Grid>
-                        <Grid className={classes.boxText} xs={12} lg={6} item>
-                            <h1>IDENTITY APP</h1>
-                            <p>
-                                Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-                                By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside,
-                                the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere,
-                                whose upper half was strewn with silver. Looking down into the dark gulf below,
-                                I could see a ruddy light streaming through a rift in the clouds.
-                            </p>
-                        </Grid>
-                        <Grid xs={2} item></Grid>
-                    </Grid>
+                    </Link>
                 </Grid>
             </Grid>
         )
