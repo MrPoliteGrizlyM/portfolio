@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
+import Cog from '../../../images/cog.png'
 
 const styles = theme => ({
     background: {
@@ -11,7 +12,8 @@ const styles = theme => ({
     box: {
         backgroundColor: "white",
         marginBottom: "50px",
-        border: "1px solid #666A86"
+        border: "1px solid #666A86",
+        position: "relative"
     },
     link: {
         textDecoration: "none",
@@ -19,6 +21,9 @@ const styles = theme => ({
     },
     boxImg: {
         textAlign: "center",
+        [theme.breakpoints.down('md')] :{
+            order: "1"
+        },
         "& img": {
             margin: "40px",
             [theme.breakpoints.down('md')] :{
@@ -33,7 +38,8 @@ const styles = theme => ({
     boxText: {
         marginTop: "40px",
         [theme.breakpoints.down('md')] :{
-            marginTop: "10px"
+            marginTop: "10px",
+            order: "3"
         },
         "& h1": {
             fontFamily: "Roboto",
@@ -55,6 +61,59 @@ const styles = theme => ({
             },
         }
 
+    },
+    boxInfo: {
+        textAlign: "center",
+        font: "17px Roboto",
+        marginTop: "40px",
+        [theme.breakpoints.down('md')] : {
+            order: "2",
+            position: "absolute",
+            top: "0",
+            right: "5%"
+        },
+        [theme.breakpoints.down('xs')] : {
+            order: "2",
+            position: "relative",
+            top: "0",
+            right: "0",
+            marginTop: "10px"
+        }
+
+    },
+    statusText: {
+        color: "#F06449"
+    },
+    statusOnline: {
+        color: "#539987"
+    },
+    statusDown: {
+        color: "red"
+    },
+    cogsBox: {
+        position: "relative",
+        marginTop: "10px",
+        [theme.breakpoints.down('md')] :{
+            display: "none"
+        },
+        "& img": {
+            position: "absolute",
+            left: "40px",
+            width: "80px"
+        },
+        "& :nth-child(1)": {
+            top: "-10px",
+            animation: "rotationRight 8s infinite linear"
+        },
+        "& :nth-child(2)": {
+            left: "38%",
+            top: "40px",
+            animation: "rotationLeft 8s infinite linear"
+        },
+        "& :nth-child(3)": {
+            top: "90px",
+            animation: "rotationRight 8s infinite linear"
+        }
     }
 });
 
@@ -80,7 +139,16 @@ class BlogList extends Component {
                                     I could see a ruddy light streaming through a rift in the clouds.
                                 </p>
                             </Grid>
-                            <Grid xs={2} item></Grid>
+                            <Grid className={classes.boxInfo} xs={12} lg={2} item>
+                                <div className={classes.statusBox}>
+                                    <span className={classes.statusText}>Status: </span><span className={classes.statusOnline}>Online</span>
+                                </div>
+                                <div className={classes.cogsBox}>
+                                    <img src={Cog} alt=""/>
+                                    <img src={Cog} alt=""/>
+                                    <img src={Cog} alt=""/>
+                                </div>
+                            </Grid>
                         </Grid>
                     </Link>
                 </Grid>
