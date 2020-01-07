@@ -1,25 +1,78 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faGithubSquare,
+         faFacebookSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 
 const styles = theme => ({
     background: {
         backgroundColor: "#495561",
-        border: "1px solid black",
+        borderTop: "1px solid #666A86",
+    },
+    copyrightBox: {
+        color: "white",
+        fontFamily: "Nunito",
         "& p": {
-            color: "white",
-            fontFamily: "Nunito",
-            textAlign: "center"
+            marginTop: "18px",
+            [theme.breakpoints.down('sm')]: {
+                marginTop: "0"
+            }
         }
-    }
+    },
+    followMeBox: {
+        "& > p": {
+            display: "flex",
+            alignItems: "center"
+        },
+        "& p > span" : {
+            color: "white",
+            fontFamily: "Roboto",
+            fontSize: "17px",
+            [theme.breakpoints.down('sm')]: {
+                fontSize: "15px"
+            }
+        },
+        "& p > a " : {
+            textDecoration: "none",
+            paddingLeft: "10px"
+        }
+    },
+
 });
+
 
 class Footer extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <div className={classes.background}>
-                <p>© mrgrizly.me</p>
-            </div>
+            <Grid className={classes.background} justify={"center"} container>
+                <Grid xs={10} item>
+                    <Grid container>
+                        <Grid xs={12} md={5} className={classes.followMeBox} item>
+                            <p>
+                                <span>FOLLOW ME AT: </span>
+                                <a href="instagram.com">
+                                    <FontAwesomeIcon icon={faInstagram} size={"2x"} color={"#f783ac"}/>
+                                </a>
+                                <a href="instagram.com">
+                                    <FontAwesomeIcon icon={faLinkedin} size={"2x"} color={"#849bf5"}/>
+                                </a>
+                                <a href="instagram.com">
+                                    <FontAwesomeIcon icon={faGithubSquare} size={"2x"} color={"white"}/>
+                                </a>
+                                <a href="instagram.com">
+                                    <FontAwesomeIcon icon={faFacebookSquare} size={"2x"} color={"#6298f5"}/>
+                                </a>
+                            </p>
+                        </Grid>
+                        <Grid xs={12} md={7} className={classes.copyrightBox} item>
+                            <p>© mrgrizly.me</p>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
         )
     }
 }
