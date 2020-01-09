@@ -20,3 +20,22 @@ body {
         transform: rotate(-359deg);
     }
 }
+
+@keyframes brokenRotationRight {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes brokenRotationLeft {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-30deg);
+    }
+}
+

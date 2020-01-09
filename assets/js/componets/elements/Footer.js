@@ -15,7 +15,7 @@ const styles = theme => ({
         color: "white",
         fontFamily: "Nunito",
         "& p": {
-            marginTop: "18px",
+            marginTop: "20px",
             [theme.breakpoints.down('sm')]: {
                 marginTop: "0"
             }
@@ -53,16 +53,16 @@ class Footer extends Component {
                         <Grid xs={12} md={5} className={classes.followMeBox} item>
                             <p>
                                 <span>FOLLOW ME AT: </span>
-                                <a href="instagram.com">
+                                <a href="https://www.instagram.com/ilyamaxu/" target="_blank">
                                     <FontAwesomeIcon icon={faInstagram} size={"2x"} color={"#f783ac"}/>
                                 </a>
-                                <a href="instagram.com">
+                                <a href="https://www.linkedin.com/in/ilya-maxutov-a4a01615a/" target="_blank">
                                     <FontAwesomeIcon icon={faLinkedin} size={"2x"} color={"#849bf5"}/>
                                 </a>
-                                <a href="instagram.com">
+                                <a href="https://github.com/MrPoliteGrizlyM" target="_blank">
                                     <FontAwesomeIcon icon={faGithubSquare} size={"2x"} color={"white"}/>
                                 </a>
-                                <a href="instagram.com">
+                                <a href="https://www.facebook.com/profile.php?id=100011249894893" target="_blank">
                                     <FontAwesomeIcon icon={faFacebookSquare} size={"2x"} color={"#6298f5"}/>
                                 </a>
                             </p>

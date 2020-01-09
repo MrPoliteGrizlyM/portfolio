@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
-import Cog from '../../../images/cog.png'
+import classNames from 'classnames';
+import CogTop from '../../../images/cog-top.png';
+import CogExtra from '../../../images/cog-extra.png';
+import CogBot from '../../../images/cog-bot.png';
 
 const styles = theme => ({
     background: {
@@ -88,31 +91,45 @@ const styles = theme => ({
         color: "#539987"
     },
     statusDown: {
-        color: "red"
+        color: "#f44336"
     },
     cogsBox: {
         position: "relative",
-        marginTop: "10px",
+        marginTop: "20px",
         [theme.breakpoints.down('md')] :{
             display: "none"
         },
         "& img": {
             position: "absolute",
-            left: "40px",
-            width: "80px"
+            left: "48px",
+            width: "70px"
         },
         "& :nth-child(1)": {
-            top: "-10px",
+            top: "-13px",
+        },
+        "& :nth-child(2)": {
+            left: "44%",
+            top: "40px"
+        },
+        "& :nth-child(3)": {
+            top: "93px",
+            left: "43px"
+        }
+    },
+    cogsActive: {
+        "& img": {
             animation: "rotationRight 8s infinite linear"
         },
         "& :nth-child(2)": {
-            left: "38%",
-            top: "40px",
             animation: "rotationLeft 8s infinite linear"
+        }
+    },
+    cogsBroken:{
+        "& img": {
+            animation: "brokenRotationRight 0.5s infinite linear"
         },
-        "& :nth-child(3)": {
-            top: "90px",
-            animation: "rotationRight 8s infinite linear"
+        "& :nth-child(2)": {
+            animation: "brokenRotationLeft 0.5s infinite linear"
         }
     }
 });
@@ -140,13 +157,11 @@ class BlogList extends Component {
                                 </p>
                             </Grid>
                             <Grid className={classes.boxInfo} xs={12} lg={2} item>
-                                <div className={classes.statusBox}>
-                                    <span className={classes.statusText}>Status: </span><span className={classes.statusOnline}>Online</span>
-                                </div>
-                                <div className={classes.cogsBox}>
-                                    <img src={Cog} alt=""/>
-                                    <img src={Cog} alt=""/>
-                                    <img src={Cog} alt=""/>
+                                <span className={classes.statusText}>Status: </span><span className={classes.statusOnline}>Online</span>
+                                <div className={classNames(classes.cogsBox, classes.cogsActive)}>
+                                    <img src={CogTop} alt=""/>
+                                    <img src={CogExtra} alt=""/>
+                                    <img src={CogBot} alt=""/>
                                 </div>
                             </Grid>
                         </Grid>
@@ -170,7 +185,16 @@ class BlogList extends Component {
                                     I could see a ruddy light streaming through a rift in the clouds.
                                 </p>
                             </Grid>
-                            <Grid xs={2} item></Grid>
+                            <Grid className={classes.boxInfo} xs={12} lg={2} item>
+                                <div className={classes.statusBox}>
+                                    <span className={classes.statusText}>Status: </span><span className={classes.statusDown}>Down</span>
+                                </div>
+                                <div className={classNames(classes.cogsBox, classes.cogsBroken)}>
+                                    <img src={CogTop} alt=""/>
+                                    <img src={CogExtra} alt=""/>
+                                    <img src={CogBot} alt=""/>
+                                </div>
+                            </Grid>
                         </Grid>
                     </Link>
                 </Grid>
