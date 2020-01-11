@@ -1,0 +1,7 @@
+ProjectsList:
+  type: object
+  config:
+    fields:
+      projects:
+        type: "[Project]"
+
