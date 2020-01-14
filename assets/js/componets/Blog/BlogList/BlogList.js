@@ -6,6 +6,7 @@ import ProjectBox from "./ProjectBox";
 import SkeletonBox from "./SkeletonBox";
 import {AlertServerError} from "../../elements/Alerts";
 import {LIST_PROJECTS} from "../../services/queries";
+import BlogHeader from "../BlogHeader/BlogHeader";
 
 const styles = theme => ({
     background: {
@@ -24,27 +25,30 @@ class BlogList extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <Grid className={classes.background} justify={"center"} container>
-                <Query query={LIST_PROJECTS}>
-                    {({ loading, error, data }) => {
-                        if (loading) return (
-                            <>
-                                <SkeletonBox/>
-                                <SkeletonBox/>
-                                <SkeletonBox/>
-                            </>
-                        );
-                        if (error) return <AlertServerError className={classes.alertBlock}/>;
+            <>
+                <BlogHeader/>
+                <Grid className={classes.background} justify={"center"} container>
+                    <Query query={LIST_PROJECTS}>
+                        {({ loading, error, data }) => {
+                            if (loading) return (
+                                <>
+                                    <SkeletonBox/>
+                                    <SkeletonBox/>
+                                    <SkeletonBox/>
+                                </>
+                            );
+                            if (error) return <AlertServerError className={classes.alertBlock}/>;
 
-                        return data.projects_list.projects.map((el, key) => <ProjectBox id={el.id}
-                                                                                        title={el.title}
-                                                                                        isActive={el.status}
-                                                                                        content={`${el.content.substr(0, 450)}...`}
-                                                                                        image={el.image}
-                                                                                        key={key}/>)
-                    }}
-                </Query>
-            </Grid>
+                            return data.projects_list.projects.map((el, key) => <ProjectBox id={el.id}
+                                                                                            title={el.title}
+                                                                                            isActive={el.isActive}
+                                                                                            content={`${el.content.substr(0, 450)}...`}
+                                                                                            image={el.image}
+                                                                                            key={key}/>)
+                        }}
+                    </Query>
+                </Grid>
+            </>
         )
     }
 }

@@ -7,12 +7,22 @@ const LIST_PROJECTS = qql`
                                 id,
                                 title,
                                 content,
-                                status,
+                                isActive,
                                 image
                               }
                             }
                         }
                         `;
 
+const GET_PROJECT = (id) => qql`
+                        query {
+                            project(id: ${id}) {
+                                title,
+                                content,
+                                image
+                            }
+                        }
+`;
 
-export { LIST_PROJECTS };
+
+export { LIST_PROJECTS, GET_PROJECT };

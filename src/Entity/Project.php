@@ -29,7 +29,7 @@ class Project
     /**
      * @ORM\Column(type="boolean")
      */
-    private $status;
+    private $isActive;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -65,14 +65,14 @@ class Project
         return $this;
     }
 
-    public function getStatus(): ?bool
+    public function getIsActive(): ?bool
     {
-        return $this->status;
+        return $this->isActive;
     }
 
-    public function setStatus(bool $status): self
+    public function setIsActive(bool $status): self
     {
-        $this->status = $status;
+        $this->isActive = $status;
 
         return $this;
     }

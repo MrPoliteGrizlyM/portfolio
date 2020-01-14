@@ -8,7 +8,7 @@ Project:
         type: String
       content:
         type: String
-      status:
+      isActive:
         type: Boolean
       image:
         type: String

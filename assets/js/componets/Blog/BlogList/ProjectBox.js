@@ -7,7 +7,6 @@ import CogTop from "../../../images/cog-top.png";
 import CogExtra from "../../../images/cog-extra.png";
 import CogBot from "../../../images/cog-bot.png";
 
-
 const styles = theme => ({
     box: {
         backgroundColor: "white",
@@ -137,7 +136,12 @@ class ProjectBox extends Component {
         const {classes, isActive} = this.props;
         return (
             <Grid className={classes.box} xs={10} item>
-                <Link className={classes.link} to={"/app/show"}>
+                <Link className={classes.link} to={{
+                                                    pathname: "/app/show",
+                                                    state: {
+                                                        projectId: this.props.id
+                                                    }
+                }}>
                     <Grid container>
                         <Grid className={classes.boxImg} xs={12} lg={4} item>
                             <img src={this.props.image} alt=""/>
