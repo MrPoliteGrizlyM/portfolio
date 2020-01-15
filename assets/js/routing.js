@@ -7,14 +7,8 @@ import BlogShow from "./componets/Blog/BlogShow/BlogShow";
 const Routing = () => {
     return (
         <Switch>
-            <Route path="/app/show">
-                <BlogHeader/>
-                <BlogShow/>
-            </Route>
-            <Route path="/app">
-                <BlogHeader/>
-                <BlogList/>
-            </Route>
+            <Route path="/app/show" component={BlogShow}/>
+            <Route path="/app" component={BlogList}/>
         </Switch>
     );
 };

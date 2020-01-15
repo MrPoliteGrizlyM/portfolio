@@ -4,3 +4,11 @@ app:
     defaults:
         path: /app
         permanent: true
+
+overblog_graphql_single_endpoint:
+    resource: "@OverblogGraphQLBundle/Resources/config/routing/single.yaml"
+    prefix: /api
+
+overblog_graphql_multiple_endpoint:
+    resource: "@OverblogGraphQLBundle/Resources/config/routing/multiple.yaml"
+    prefix: /api/multiple

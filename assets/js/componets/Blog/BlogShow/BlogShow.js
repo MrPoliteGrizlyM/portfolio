@@ -4,7 +4,12 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import HomeIcon from '@material-ui/icons/Home';
-import Link from '@material-ui/core/Link';
+import {Link, Redirect} from "react-router-dom";
+import { Query } from 'react-apollo';
+import {GET_PROJECT} from "../../services/queries";
+import {AlertServerError} from "../../elements/Alerts";
+import BlogHeader from "../BlogHeader/BlogHeader";
+import {Skeleton} from "@material-ui/lab";
 
 const styles = theme => ({
     background: {
@@ -15,10 +20,12 @@ const styles = theme => ({
     },
     breadcrumb: {
         color: "white",
-        textAlign: "left"
+        textAlign: "left",
     },
     breadcrumbLink: {
-        display: "flex"
+        display: "flex",
+        color: "inherit",
+        textDecoration: "none"
     },
     breadcrumbIcon: {
         marginRight: theme.spacing(0.5),
@@ -62,70 +69,116 @@ const styles = theme => ({
                 padding: "5px 20px 30px 20px"
             },
         }
+    },
+    skeletonBrTitle: {
+        width: "120px"
+    },
+    skeletonImage: {
+        height: "170px",
+        margin: "50px 0 0 0",
+        width: "40%",
+        left: "30%",
+        [theme.breakpoints.down('xs')] :{
+            margin: "0",
+            width: "100%",
+            left: "0"
+        },
+        [theme.breakpoints.between('sm', 'md')] :{
+            width: "60%",
+            left: "20%"
+        },
+    },
+    skeletonTitle: {
+        width: "40%",
+        marginTop: "10px",
+        marginBottom: "20px",
+        left: "30%",
+        [theme.breakpoints.down('xs')] :{
+            width: "100%",
+            left: "0"
+        },
+        [theme.breakpoints.between('sm', 'md')] :{
+            width: "60%",
+            left: "20%"
+        },
+    },
+    skeletonText: {
+        margin: "10px 80px 20px"
     }
 });
 
 class BlogShow extends Component {
+    state = {
+        query: '',
+        redirect: false
+    };
+
+    componentDidMount() {
+        if (this.props.location.state) {
+            const { projectId } = this.props.location.state;
+            this.setState({
+                query: GET_PROJECT(projectId),
+                redirect: false
+            });
+        } else {
+            this.setState({
+                redirect: true
+            });
+        }
+    }
+
+    renderRedirect() {
+        if (this.state.redirect) {
+            return <Redirect to={"/app/"}/>
+        }
+    }
+
     render() {
         const {classes} = this.props;
         return (
-            <Grid className={classes.background} justify={"center"} container>
+            <>
+                <BlogHeader/>
+                {this.renderRedirect()}
+                <Grid className={classes.background} justify={"center"} container>
+                    {this.state.query && (
+                        <Query query={this.state.query}>
+                            { ({ loading, error, data }) => {
+                                if (error) return <AlertServerError/>;
 
-                <Grid xs={10} className={classes.breadcrumbBox} item>
-                    <Breadcrumbs className={classes.breadcrumb} aria-label="breadcrumb">
-                        <Link color={"inherit"} className={classes.breadcrumbLink} href="/">
-                            <HomeIcon className={classes.breadcrumbIcon} />
-                            Home
-                        </Link>
-                        <Typography color={"inherit"}>Identity app</Typography>
-                    </Breadcrumbs>
+                                return (
+                                    <>
+                                        <Grid xs={10} className={classes.breadcrumbBox} item>
+                                            <Breadcrumbs className={classes.breadcrumb} aria-label="breadcrumb">
+                                                <Link className={classes.breadcrumbLink} to={'/app/'}>
+                                                    <HomeIcon className={classes.breadcrumbIcon} />
+                                                    Home
+                                                </Link>
+                                                {loading ? <Skeleton animation="wave" className={classes.skeletonBrTitle} />
+                                                         : <Typography color={"inherit"}>{data.project.title}</Typography>}
+                                            </Breadcrumbs>
+                                        </Grid>
+
+
+                                        <Grid xs={10} className={classes.content} item>
+                                            {loading ? <Skeleton variant="rect" animation="wave" className={classes.skeletonImage} /> : <img src={data.project.image} alt=""/> }
+                                            {loading ? <Skeleton animation="wave" className={classes.skeletonTitle} /> : <h1>{data.project.title}</h1>}
+                                            {loading ? <>
+                                                            <Skeleton animation="wave" className={classes.skeletonText} />
+                                                            <Skeleton animation="wave" className={classes.skeletonText} />
+                                                            <Skeleton animation="wave" className={classes.skeletonText} />
+                                                            <Skeleton animation="wave" className={classes.skeletonText} />
+                                                            <Skeleton animation="wave" className={classes.skeletonText} />
+                                                            <Skeleton animation="wave" className={classes.skeletonText} />
+                                                       </>
+                                                     : <p>{data.project.content}</p>}
+                                        </Grid>
+                                    </>
+                                );
+                            }}
+                        </Query>
+                    )}
                 </Grid>
-
-
-                <Grid xs={10} className={classes.content} item>
-                    <img src="/images/project-img.jpg" alt=""/>
-                    <h1>Identity app</h1>
-                    <p>
-                        <p>
-                        Apparently we had reached a great height in the atmosphere, for the sky was a dead black,
-                        and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the
-                        sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
-                        and the car seemed to float in the middle of an immense dark sphere, whose upper half was
-                        strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming
-                        through a rift in the clouds.
-                        </p>
-                        <p>
-                        Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and
-                        the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to
-                        the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car
-                        seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
-                        Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the
-                        clouds.
-                        </p>
-                        <p>
-                        Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and
-                        the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the
-                        level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
-                        to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
-                        Looking down into the dark gulf below, I could see a ruddy light streaming through a rift
-                        in the clouds.
-                        </p>
-                        <p>
-                        Apparently we had reached a great height in the atmosphere, for the sky was a dead black,
-                        and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the
-                        sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
-                        and the car seemed to float in the middle of an immense dark sphere, whose upper half was
-                        strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming
-                        through a rift in the clouds.Apparently we had reached a great height in the atmosphere,
-                        for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which
-                        lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud
-                        beneath was dished out, and the car seemed to float in the middle of an immense dark sphere,
-                        whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a
-                        ruddy light streaming through a rift in the clouds.
-                        </p>
-                    </p>
-                </Grid>
-            </Grid>
+            </>
         )
     }
 }

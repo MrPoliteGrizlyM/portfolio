@@ -1,0 +1,15 @@
+Query:
+  type: object
+  config:
+    fields:
+      project:
+        type: Project
+        args:
+          id:
+            type: Int
+        resolve: '@=resolver("App\\GraphQL\\Resolver\\ProjectResolver::resolver", [args])'
+      projects_list:
+        type: ProjectsList
+        args:
+          limit: Int
+        resolve: '@=resolver("App\\GraphQL\\Resolver\\ProjectListResolver::resolver", [args])'
