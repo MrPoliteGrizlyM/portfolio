@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ed451c41-a424-487d-b73f-803453333c71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/componets/Blog/BlogList/BlogList.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/componets/Blog/BlogList/BlogList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/componets/Blog/BlogList/SkeletonBox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/componets/elements/Alerts.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/componets/elements/Alerts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/componets/elements/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/componets/elements/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path=".idea" />
     <ignored path=".idea/" />
@@ -35,16 +37,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="5" />
+          <entry key="css" value="6" />
           <entry key="env" value="2" />
           <entry key="gitignore" value="2" />
           <entry key="jpg" value="4" />
-          <entry key="js" value="44" />
+          <entry key="js" value="48" />
           <entry key="json" value="4" />
           <entry key="lock" value="1" />
           <entry key="php" value="14" />
           <entry key="png" value="12" />
-          <entry key="svg" value="1" />
+          <entry key="svg" value="2" />
           <entry key="twig" value="4" />
           <entry key="yaml" value="16" />
         </counts>
@@ -52,13 +54,13 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="2" />
-          <entry key="CSS" value="5" />
+          <entry key="CSS" value="6" />
           <entry key="Image" value="16" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="44" />
+          <entry key="JavaScript" value="48" />
           <entry key="PHP" value="14" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SVG" value="1" />
+          <entry key="SVG" value="2" />
           <entry key="Twig" value="4" />
           <entry key="YAML" value="16" />
           <entry key="yarn.lock" value="1" />
@@ -66,11 +68,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="138" />
+          <entry key="css" value="228" />
           <entry key="dummy" value="4" />
           <entry key="env" value="19" />
-          <entry key="js" value="11286" />
+          <entry key="js" value="11479" />
           <entry key="php" value="340" />
+          <entry key="svg" value="138" />
           <entry key="twig" value="75" />
           <entry key="yaml" value="335" />
         </counts>
@@ -78,10 +81,11 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="19" />
-          <entry key="CSS" value="138" />
-          <entry key="JavaScript" value="11286" />
+          <entry key="CSS" value="228" />
+          <entry key="JavaScript" value="11479" />
           <entry key="PHP" value="340" />
           <entry key="PLAIN_TEXT" value="4" />
+          <entry key="SVG" value="138" />
           <entry key="Twig" value="75" />
           <entry key="YAML" value="335" />
         </counts>
@@ -90,11 +94,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/componets/Blog/BlogList/BlogList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="40" column="90" selection-start-line="40" selection-start-column="90" selection-end-line="40" selection-end-column="90" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/componets/Blog/BlogList/ProjectBox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/images/logo.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/componets/elements/Header.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -143,10 +197,8 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/templates/app/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/componets/elements/StyledElements.js" />
-        <option value="$PROJECT_DIR$/assets/js/componets/elements/Header.js" />
         <option value="$PROJECT_DIR$/assets/js/componets/Blog/BlogHeader/BlogHeader.js" />
         <option value="$PROJECT_DIR$/assets/js/componets/elements/Footer.js" />
-        <option value="$PROJECT_DIR$/assets/css/app.css" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/assets/js/componets/Blog/BlogList/SkeletonBox.js" />
@@ -163,6 +215,9 @@
         <option value="$PROJECT_DIR$/assets/js/componets/Blog/BlogList/BlogList.js" />
         <option value="$PROJECT_DIR$/assets/js/componets/elements/Alerts.js" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/assets/css/app.css" />
+        <option value="$PROJECT_DIR$/assets/js/images/logo.svg" />
+        <option value="$PROJECT_DIR$/assets/js/componets/elements/Header.js" />
       </list>
     </option>
   </component>
@@ -323,6 +378,12 @@
               <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="portfolio" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -339,6 +400,15 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="componets" type="462c0819:PsiDirectoryNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="componets" type="462c0819:PsiDirectoryNode" />
+              <item name="Blog" type="462c0819:PsiDirectoryNode" />
+              <item name="BlogHeader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
@@ -438,15 +508,16 @@
       <workItem from="1578733681027" duration="5606000" />
       <workItem from="1578806030553" duration="6329000" />
       <workItem from="1578958033471" duration="4241000" />
-      <workItem from="1579126913447" duration="1622000" />
+      <workItem from="1579126913447" duration="6737000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70650000" />
+    <option name="totallyTimeSpent" value="75765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18383405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -486,9 +557,6 @@
     <entry file="file://$PROJECT_DIR$/public/build/styles.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/images/logo.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -505,13 +573,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/images/project-img.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/componets/Blog/BlogHeader/BlogHeader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -546,13 +607,6 @@
     <entry file="file://$PROJECT_DIR$/assets/js/images/cog.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/app/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -583,13 +637,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/graphql/types/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/componets/elements/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret line="2" column="24" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/componets/elements/StyledElements.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -704,26 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/componets/Blog/BlogList/ProjectBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2254">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/componets/Blog/BlogList/BlogList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/componets/elements/Alerts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -733,8 +760,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/componets/Blog/BlogHeader/BlogHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/componets/Blog/BlogList/BlogList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="40" column="90" selection-start-line="40" selection-start-column="90" selection-end-line="40" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/componets/Blog/BlogList/ProjectBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/images/logo.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/componets/elements/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

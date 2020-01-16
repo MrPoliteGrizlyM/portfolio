@@ -39,3 +39,21 @@ body {
     }
 }
 
+@keyframes translateTitle {
+    from {
+        transform: translateY(23px) translateX(45px);
+    }
+    to {
+        transform: translateY(23px) translateX(60px);
+    }
+}
+
+@keyframes rotateIco {
+    from {
+        transform: scale(0.9) rotate(0deg);
+    }
+    to {
+        transform: scale(0.9) rotate(360deg);
+    }
+}
+
