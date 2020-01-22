@@ -90,6 +90,9 @@
     "egulias/email-validator": {
         "version": "2.1.12"
     },
+    "fig/link-util": {
+        "version": "1.1.0"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -158,6 +161,9 @@
     "psr/log": {
         "version": "1.1.2"
     },
+    "ramsey/uuid": {
+        "version": "3.9.2"
+    },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
         "recipe": {
@@ -169,6 +175,18 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "swiftmailer/swiftmailer": {
+        "version": "v6.2.3"
+    },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "410b9325a37ef86f1e47262c61738f6202202bca"
+        }
     },
     "symfony/asset": {
         "version": "v5.0.2"
@@ -200,6 +218,9 @@
     },
     "symfony/css-selector": {
         "version": "v5.0.2"
+    },
+    "symfony/debug": {
+        "version": "v4.3.10"
     },
     "symfony/debug-bundle": {
         "version": "4.1",
@@ -457,6 +478,20 @@
     "symfony/string": {
         "version": "v5.0.2"
     },
+    "symfony/swiftmailer-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.5",
+            "ref": "ae4d22af30bbd484506bc1817c5a3ef72c855b93"
+        },
+        "files": [
+            "config/packages/dev/swiftmailer.yaml",
+            "config/packages/swiftmailer.yaml",
+            "config/packages/test/swiftmailer.yaml"
+        ]
+    },
     "symfony/test-pack": {
         "version": "v1.0.6"
     },
@@ -531,6 +566,15 @@
             "config/packages/test/web_profiler.yaml",
             "config/routes/dev/web_profiler.yaml"
         ]
+    },
+    "symfony/web-server-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "dae9b39fd6717970be7601101ce5aa960bf53d9a"
+        }
     },
     "symfony/webpack-encore-bundle": {
         "version": "1.6",
