@@ -1,5 +1,7 @@
 sonata_admin:
     title: 'Portfolio Admin'
+    templates:
+        user_block: '/admin/blocks/user_block.html.twig'
     dashboard:
         blocks:
             - { type: sonata.admin.block.admin_list, position: left }
@@ -9,6 +11,7 @@ sonata_admin:
                 label_catalogue:      ~
                 items:
                 - admin.project
+                - admin.user
 
 sonata_block:
     blocks:
