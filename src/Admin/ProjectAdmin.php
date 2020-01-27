@@ -13,9 +13,8 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Sonata\FormatterBundle\Form\Type\SimpleFormatterType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Ramsey\Uuid\Uuid;
 
 
 class ProjectAdmin extends AbstractAdmin
@@ -27,7 +26,11 @@ class ProjectAdmin extends AbstractAdmin
                    ->add('isActive')->end();
 
         $formMapper->with('Content', ['class'=> 'col-md-10'])
-                    ->add('content', TextareaType::class)
+                    ->add('content',SimpleFormatterType::class, [
+                        'format' => 'richhtml',
+                        'ckeditor_context' => 'default',
+
+                    ])
                     ->add('image')->end();
     }
 

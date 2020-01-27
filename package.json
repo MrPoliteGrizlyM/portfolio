@@ -29,6 +29,8 @@
         "classnames": "^2.2.6",
         "graphql": "^14.5.8",
         "graphql-tag": "^2.10.1",
+        "preact": "^10.2.1",
+        "preact-html-converter": "^0.4.2",
         "prop-types": "^15.7.2",
         "react": "^16.12.0",
         "react-apollo": "^3.1.3",

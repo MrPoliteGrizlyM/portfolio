@@ -1,6 +1,7 @@
 sonata_admin:
     title: 'Portfolio Admin'
     templates:
+        layout:  '/admin/layout.html.twig'
         user_block: '/admin/blocks/user_block.html.twig'
     dashboard:
         blocks:

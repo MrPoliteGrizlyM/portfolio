@@ -12,3 +12,11 @@ overblog_graphql_single_endpoint:
 overblog_graphql_multiple_endpoint:
     resource: "@OverblogGraphQLBundle/Resources/config/routing/multiple.yaml"
     prefix: /api/multiple
+
+gallery:
+    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
+    prefix: /admin/media/gallery
+
+media:
+    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
+    prefix: /admin/media
